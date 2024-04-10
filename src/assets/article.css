@@ -112,3 +112,17 @@ a{
 .news-icon{
     font-weight: bold;
 }
+
+.pagination_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.buttons{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border-width: 0;
+    font-size: 18px;
+}
