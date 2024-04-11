@@ -83,10 +83,7 @@ export default {
         <li v-for="t in tagsList?.data?.slice(0, 8)" class="news-icon"><a @click="tags=t" href="#">{{ t }}</a></li>
       </ul>
     </div>
-    <div class="pagination-buttons">
-      <button class="buttons">Предыдущий</button>
-      <button class="buttons">Следующий</button>
-    </div>
+    
   </div>
 </template>
 
