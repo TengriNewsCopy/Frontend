@@ -7,7 +7,7 @@ export default {
     return {
       result: [],
       page: 1,
-      perPage: 2,
+      perPage: 5,
       search: null,
       tags: null,
       sort: 'published_at',
@@ -18,6 +18,8 @@ export default {
   },
   methods: {
     async getAnswer() {
+      this.result = [];
+
       const { data } = await axios.get("http://8.219.172.134/api/news",
         {
                   params: {
@@ -49,6 +51,13 @@ export default {
       this.getAnswer();
     },
     tags() {
+      this.getAnswer();
+    },
+    page(val) {
+      if (val <= 0) {
+        this.page = 1;
+      }
+
       this.getAnswer();
     },
   },
@@ -118,6 +127,11 @@ export default {
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="pagination-buttons">
+        <button @click="page--" class="btn">Предыдущий</button>
+        <button @click="page++" class="btn">Следующий</button>
       </div>
     </div>
   </div>
