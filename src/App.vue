@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router'
 <template>
   <header class="tengri-header">
     <div class="logo">
-      <a href="index.html"><img class="img-logo" src="./assets/images/main_long.svg" alt=""></a>
+      <a href="/"><img class="img-logo" src="./assets/images/main_long.svg" alt=""></a>
     </div>
     <nav>
       <ul>
