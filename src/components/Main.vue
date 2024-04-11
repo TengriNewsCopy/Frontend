@@ -72,6 +72,10 @@ export default {
         <ul class="news-list">
           <li v-for="t in tagsList?.data?.slice(0, 8)" class="news-icon"><a @click="tags=t" href="#">{{ t }}</a></li>
         </ul>
+
+        <div class="search">
+          <input v-model="search" @input="getAnswer" type="text" placeholder="Поиск" class="search-input">
+        </div>
       </div>
       <div class="divider"></div>
       <div class="news-big-container">
